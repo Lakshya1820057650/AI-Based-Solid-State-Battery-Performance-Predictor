@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: battery-performance-predictor
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"
+    healthCheckPath: /_stcore/health
